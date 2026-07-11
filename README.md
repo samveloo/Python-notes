@@ -10,4 +10,4 @@ Absolutly ALL
 2. Abstract for all topics
 3. For, if, def, ect.
 ---
-## I'm know, this repository isn't be popular, but I'm know, this repository is very great :D
+## I'm know, this repository won't be popular, but I'm know, this repository is very great :D

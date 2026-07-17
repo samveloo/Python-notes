@@ -72,3 +72,12 @@ else:
 
 n = int(input())
 print((n + 1) // 2 if n % 2 != 0 else -n // 2)
+
+n = int(input())
+
+arr = []
+for i in range(n):
+    arr.append(int(input()))
+
+sortArr = sorted(arr)
+print(sortArr[-1], sortArr[-2], sep='\n')

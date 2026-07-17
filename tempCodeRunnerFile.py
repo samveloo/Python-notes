@@ -1,8 +1,7 @@
+fib = [1, 1]
 n = int(input())
 
-arr = []
-for i in range(n):
-    arr.append(int(input()))
+for i in range(2, n):
+    fib.append(fib[i - 1] + fib[i - 2])
 
-sortArr = sorted(arr)
-print(sortArr[-1], sortArr[-2], sep='\n')
+print(*fib)

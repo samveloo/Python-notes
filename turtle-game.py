@@ -13,10 +13,10 @@ def s():
     t.backward(10)
 
 def a():
-    t.left(90)
+    t.left(45)
 
 def d():
-    t.right(90)
+    t.right(45)
 
 screen.listen()
 

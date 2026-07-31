@@ -47,3 +47,11 @@ name = input()
 while name != 'Валера' and name != 'Артур':
     print('Доступ запрещен')
     name = input()
+
+counter = 0
+str = input()
+while str not in ('стоп', 'хватит', 'достаточно'):
+    counter += 1
+    str = input()
+print(counter)
+

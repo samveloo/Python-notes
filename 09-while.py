@@ -59,3 +59,9 @@ str = input()
 while str != 'КОНЕЦ' and str != 'конец':
     print(str)
     str = input()
+
+n = int(input())
+while not n % 7:
+    print(n)
+    n = int(input())
+

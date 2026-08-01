@@ -65,3 +65,7 @@ while not n % 7:
     print(n)
     n = int(input())
 
+count = 0
+while (num := int(input())) >= 1 and num <= 5:
+    count += 1 if num == 5 else 0
+print(count)

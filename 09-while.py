@@ -73,3 +73,10 @@ print(count)
 while '_' in (nickname := input()):
     pass
 print(nickname)
+
+count = 0
+while (person := input()) != 'Александра':
+    pass
+while (person := input()) != 'Левон':
+    count += 1
+print(count)

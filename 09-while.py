@@ -69,3 +69,7 @@ count = 0
 while (num := int(input())) >= 1 and num <= 5:
     count += 1 if num == 5 else 0
 print(count)
+
+while '_' in (nickname := input()):
+    pass
+print(nickname)

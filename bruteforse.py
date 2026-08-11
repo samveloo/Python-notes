@@ -1,44 +1,44 @@
+import os
 import time
 
-# Имя нашего словаря
-DICTIONARY_FILE = "../rockyou.txt"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DICTIONARY_FILE = os.path.abspath(os.path.join(BASE_DIR, "..", "..", "rockyou.txt"))
 
-# Пароль, который мы ищем (попробуй ввести что-то популярное, например: qwerty, iloveyou или 123456)
-target_password = input("Введите пароль для симуляции взлома: ")
+if not os.path.exists(DICTIONARY_FILE):
+    print(f"[ERROR] Dictionary file not found at: {DICTIONARY_FILE}")
+    print("[INFO] Please place 'rockyou.txt' in the correct folder or update DICTIONARY_FILE path in the code.")
+    exit(1)
 
-print("\n[+] Загрузка словаря и начало атаки...\n")
+target_password = input("Enter a password for brute-force simulation: ")
+
+print("\nLoading dictionary and starting the attack...\n")
 start_time = time.time()
 
 found = False
 count = 0
 
-# errors='ignore' спасет нас от кривых символов, на которых споткнулся архиватор
 with open(DICTIONARY_FILE, "r", encoding="utf-8", errors="ignore") as file:
     for line in file:
         count += 1
-        
-        # Убираем невидимый символ переноса строки \n в конце слова
         guess = line.strip()
         
-        # Чтобы консоль не лагала, показываем процесс каждые 50 000 попыток
         if count % 50000 == 0:
-            print(f"Проверено паролей: {count}... Текущий: {guess}", end="\r")
+            print(f"\rPasswords checked: {count}... Current: {guess}", end="", flush=True)
             
-        # Проверяем совпадение
         if guess == target_password:
             end_time = time.time()
             print("\n" + "="*40)
-            print(f"Пароль взломан: {guess}")
-            print(f"Позиция в словаре: № {count}")
-            print(f"Затрачено времени: {round(end_time - start_time, 2)} сек.")
+            print(f"Password cracked: {guess}")
+            print(f"Dictionary position: #{count}")
+            print(f"Time elapsed: {round(end_time - start_time, 2)} seconds")
             print("="*40)
             found = True
             break
 
 if not found:
     end_time = time.time()
-    print(f"\nПароль не найден в словаре. Проверено строк: {count}")
-    print(f"Время поиска: {round(end_time - start_time, 2)} сек.")
+    print(f"\nPassword not found in the dictionary. Total lines checked: {count}")
+    print(f"Search time: {round(end_time - start_time, 2)} seconds")
 
 
 
@@ -100,7 +100,7 @@ async function startWebBrute() {
       // или в тексте ответа появляется слово "Welcome", "Success" или токен доступа.
       if (response.data.includes('Welcome') || response.status === 302) {
         console.log('\n' + '='.repeat(40));
-        console.log(`🔑 ПАРОЛЬ ПОДОШЕЛ: ${password}`);
+        console.log(`ПАРОЛЬ ПОДОШЕЛ: ${password}`);
         console.log(`Проверено запросов: ${count}`);
         console.log('='.repeat(40));
         
@@ -110,13 +110,13 @@ async function startWebBrute() {
       }
 
     } catch (error) {
-      console.error(`\n❌ Ошибка сети на попытке ${count} (${password}): ${error.message}`);
+      console.error(`\nОшибка сети на попытке ${count} (${password}): ${error.message}`);
       // Если сайт упал от нагрузки, можно сделать паузу, но мы просто идем дальше
       continue; 
     }
   }
 
-  console.log('\n❌ Перебор окончен. Пароль не найден в словаре.');
+  console.log('\nПеребор окончен. Пароль не найден в словаре.');
 }
 
 startWebBrute();

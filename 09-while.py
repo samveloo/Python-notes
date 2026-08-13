@@ -125,3 +125,7 @@ while num > 0:
 
 print(int(input()[::-1]))
 
+n = input()
+
+print(f'Максимальная цифра равна {max(n)}')
+print(f'Минимальная цифра равна {min(n)}')

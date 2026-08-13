@@ -144,3 +144,5 @@ print(
     int(n[0]) + int(n[-1]),
     sep='\n'
 )
+
+print(input()[1])

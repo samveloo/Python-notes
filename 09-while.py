@@ -129,3 +129,18 @@ n = input()
 
 print(f'Максимальная цифра равна {max(n)}')
 print(f'Минимальная цифра равна {min(n)}')
+
+from math import prod
+n = input()
+
+sumN = sum(int(i) for i in n)
+
+print(
+    sumN,
+    len(n),
+    prod(int(i) for i in n),
+    sumN / len(n),
+    n[0],
+    int(n[0]) + int(n[-1]),
+    sep='\n'
+)

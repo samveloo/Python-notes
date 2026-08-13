@@ -151,3 +151,16 @@ numStr = input()
 num = int(numStr)
 
 print((num // 10 ** (len(numStr) - 2)) % 10)
+
+num = int(input())
+flag = 'YES'
+
+while num > 9:
+    if (num % 10) == (num // 10 % 10):
+        flag = 'YES'
+    else:
+        flag = 'NO'
+        break
+    num //= 10
+    
+print(flag)

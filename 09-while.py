@@ -146,3 +146,8 @@ print(
 )
 
 print(input()[1])
+
+numStr = input()
+num = int(numStr)
+
+print((num // 10 ** (len(numStr) - 2)) % 10)

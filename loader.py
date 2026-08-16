@@ -43,7 +43,7 @@ def download_movie(url, output_dir="./Movies"):
         if process.returncode == 0:
             print("\n\n[🎉] Готово! Фильм успешно скачан в максимальном качестве.")
             # Отправляем push-уведомление в систему Fedora (GNOME/KDE)
-            os.system('notify-send "Spider Loader" "Фильм успешно скачан и готов к просмотру в 1080p!" --icon=video-x-generic')
+            os.system('notify-send "Loader" "Фильм успешно скачан и готов к просмотру!" --icon=video-x-generic')
         else:
             print(f"\n\n[!] Ошибка aria2. Код возврата: {process.returncode}")
             

@@ -48,7 +48,7 @@ def download_movie(url, output_dir="./Movies"):
             print(f"\n\n[!] Ошибка aria2. Код возврата: {process.returncode}")
             
     except KeyboardInterrupt:
-        print("\n\n[!] Закачка приостановлена Архитектором. Прогресс сохранен. При следующем запуске докачаем!")
+        print("\n\n[!] Закачка приостановлена. Прогресс сохранен. При следующем запуске докачаем!")
     except Exception as e:
         print(f"\n[!] Критическая ошибка: {e}")
 

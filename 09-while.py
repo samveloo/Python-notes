@@ -164,3 +164,21 @@ while num > 9:
     num //= 10
     
 print(flag)
+
+n = int(input())
+flag = 'YES'
+
+lastN = n % 10
+n //= 10
+
+while n > 0:
+    currN = n % 10
+    
+    if currN < lastN:
+        flag = 'NO'
+        break
+        
+    lastN = currN
+    n //= 10
+        
+print(flag)

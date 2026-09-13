@@ -205,3 +205,8 @@ for i in range(3):
         if i == j:
             break
         print(i, j)
+
+for i in range(8):
+    for j in range(6):
+        print('*', end='')
+    print()

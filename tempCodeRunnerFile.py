@@ -1,2 +1,1 @@
-
-print(3%9)
+            print(hours, ':', minutes, ':', seconds)

@@ -194,3 +194,8 @@ for i in range(2, n + 1):
     if not (n % i):
         print(i)
         break
+
+for hours in range(24):
+    for minutes in range(60):
+        for seconds in range(60):
+            print(hours, ':', minutes, ':', seconds)

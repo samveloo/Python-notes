@@ -221,3 +221,9 @@ for _ in range(n):
     for _ in range(3):
         print(n, end=' ')
     print()
+
+n = int(input())
+for i in range(1, n + 1):
+    for j in range(5):
+        print(i, end=' ')
+    print() 

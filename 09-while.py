@@ -215,3 +215,9 @@ for i in range(8):
     for j in range(i + 1):
         print('*', end='')
     print()
+
+n = int(input())
+for _ in range(n):
+    for _ in range(3):
+        print(n, end=' ')
+    print()

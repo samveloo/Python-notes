@@ -246,3 +246,4 @@ for x in range(1, 65):
             total += 1
             print('x =', x, 'y =', y)
 print('Общее количество натуральных решений =', total)
+

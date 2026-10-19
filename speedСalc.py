@@ -11,12 +11,15 @@ if res == 1:
     mb = int(input('Сколько МБ надо конвертировать: '))
     kb = mb * 1024
     
-    full_minutes = kb / 100 / 60
+    full_seconds = kb / 100
+    full_minutes = full_seconds / 60
 
     if full_minutes >= 60:
         hours = int(full_minutes // 60)
         minutes = int(full_minutes % 60)
         print(f'{mb} МБ будет скачивать от {hours} часов и {minutes} минут')
+    elif full_minutes < 1:
+        print(f'{mb} МБ будет скачивать от {full_seconds:.1f} секунд')
     else:
         print(f'{mb} МБ будет скачивать от {full_minutes:.1f} минут')
 
